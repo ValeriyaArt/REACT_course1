@@ -1,15 +1,22 @@
 import s from './ProfileInfo.module.css'
+import Preloader from "../../common/Preloader/Preloader";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    console.log(props)
+    if (!props.profile) {
+        return <Preloader/>
+    }
     return <div>
         <div>
             <img width='100%'
-                 src='https://img51994.vremya.tv/img/2015-10-12/fmt_96_24_sohrani-moyu-rech-navsegda-2618614.jpg'></img>
+                 src='https://img51994.vremya.tv/img/2015-10-12/fmt_96_24_sohrani-moyu-rech-navsegda-2618614.jpg'/>
         </div>
         <div className={s.descriptionBlock}>
-            <img width='30%'
-                 src='https://mymodernmet.com/wp/wp-content/uploads/2020/10/cooper-baby-corgi-dogs-8.jpg'></img>
-            user prof
+            <img src={props.profile.photos.large}/>
+
+            <div>
+                <h1>{props.profile.fullName}</h1>
+            </div>
         </div>
     </div>
 }

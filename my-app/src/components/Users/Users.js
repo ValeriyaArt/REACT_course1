@@ -4,6 +4,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import axios from "axios";
 import {toggleIsFollowing} from "../../redux/users-reducer";
+import {usersAPI} from "../../api/api";
 
 
 let Users = (props) => {
@@ -38,41 +39,10 @@ let Users = (props) => {
                     </div>
                     <div>
                         {u.followed
-                            ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                                props.toggleIsFollowing(true, u.id)
-                                axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
-                                    withCredentials: true,
-                                    headers: {
-                                        "API-KEY": "6dec84d3-93af-4b7c-89c5-c65a95791f52"
-                                    }
-                                })
-                                    .then(response => {
-                                        if (response.data.resultCode == 0) {
-                                            props.unfollow(u.id)
-                                        }
-                                        props.toggleIsFollowing(false, u.id)
-
-                                    })
-
-                            }}>Unfollow</button>
-                            : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                                props.toggleIsFollowing(true, u.id)
-
-                                axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
-                                    withCredentials: true,
-                                    headers: {
-                                        "API-KEY": "6dec84d3-93af-4b7c-89c5-c65a95791f52"
-                                    }
-                                })
-                                    .then(response => {
-                                        if (response.data.resultCode == 0) {
-                                            props.follow(u.id)
-                                        }
-                                        props.toggleIsFollowing(false, u.id)
-
-                                    })
-
-                            }}>Follow</button>
+                            ? <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                      onClick={() => {props.unfollow(u.id)}}>Unfollow</button>
+                            : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                      onClick={() => {props.follow(u.id)}}>Follow</button>
                         }
                     </div>
                 </span>

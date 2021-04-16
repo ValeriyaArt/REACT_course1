@@ -22,7 +22,6 @@ const Dialogs = (props) => {
 
     let messageElements = state.messages.map( m => <Message message={m.message}/>);
 
-    if (props.isAuth === false) return <Redirect to={"/login"}/>;
     return (
         <div>
             <div className={s.dialogs}>
@@ -32,9 +31,10 @@ const Dialogs = (props) => {
                 <div className={s.messages}>
                     <div>{messageElements}</div>
                     <div>
-                        <div><textarea value={newMessageBody}
-                                       onChange={onNewMessageChange}
-                                       placeholder='Enter your message'></textarea></div>
+                        <div>
+                            <textarea value={newMessageBody}
+    onChange={onNewMessageChange}
+    placeholder='Enter your message'/></div>
                         <div><button onClick={onNewMessageClick}>Send</button></div>
                     </div>
                 </div>

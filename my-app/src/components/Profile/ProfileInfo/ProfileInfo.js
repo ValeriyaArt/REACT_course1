@@ -1,5 +1,6 @@
 import s from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
     console.log(props)
@@ -13,7 +14,7 @@ const ProfileInfo = (props) => {
         </div>
         <div className={s.descriptionBlock}>
             <img src={props.profile.photos.large}/>
-
+            <ProfileStatus/>
             <div>
                 <h1>{props.profile.fullName}</h1>
             </div>

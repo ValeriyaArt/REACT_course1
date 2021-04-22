@@ -1,9 +1,11 @@
 import {
-    follow, getUsers,
+    follow,
+    getUsers,
     setCurrentPage,
     setTotalUsersCount,
     setUsers,
-    toggleIsFetching, toggleIsFollowing,
+    toggleIsFetching,
+    toggleIsFollowing,
     unfollow
 } from "../../redux/users-reducer";
 import {connect} from "react-redux";

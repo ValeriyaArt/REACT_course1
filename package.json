@@ -3,5 +3,8 @@
     "react-final-form": "^6.5.3",
     "redux-thunk": "^2.3.0",
     "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "remote-redux-devtools": "^0.5.16"
   }
 }

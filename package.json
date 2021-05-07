@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "classnames": "^2.3.1",
     "react-final-form": "^6.5.3",
     "redux-thunk": "^2.3.0",
     "yarn": "^1.22.10"

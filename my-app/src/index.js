@@ -4,14 +4,7 @@ import App from "./App";
 import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
+import SamuraiApp from "./App";
 
-ReactDOM.render(
-    <BrowserRouter>
-    <React.StrictMode>
-        <Provider store={store}>
-            <App/>
-        </Provider>
-    </React.StrictMode>
-    </BrowserRouter>,
-    document.getElementById('root')
+ReactDOM.render(<SamuraiApp/>, document.getElementById('root')
 );

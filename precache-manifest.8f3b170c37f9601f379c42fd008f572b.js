@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/REACT_course1/static/js/0.e443d0c6.chunk.js"
   },
   {
-    "revision": "129bee13224ecab0107f",
+    "revision": "617d58b81512ccce7f5e",
     "url": "/REACT_course1/static/css/main.c072ed7e.chunk.css"
   },
   {
-    "revision": "129bee13224ecab0107f",
-    "url": "/REACT_course1/static/js/main.8a27ea4b.chunk.js"
+    "revision": "617d58b81512ccce7f5e",
+    "url": "/REACT_course1/static/js/main.adfac4db.chunk.js"
   },
   {
     "revision": "6ed41f088f9d26459885",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/REACT_course1/static/media/user.08e6ccaf.png"
   },
   {
-    "revision": "0800f1833b8ece6a48e94fd99eab17b1",
+    "revision": "fb3ca646595b35cf5bd52026279e378b",
     "url": "/REACT_course1/index.html"
   }
 ];

@@ -1,4 +1,4 @@
-import {profileAPI, usersAPI} from "../api/api";
+import {usersAPI} from "../api/api";
 import {updateObjectInArray} from "../utils/object-helpers";
 
 const FOLLOW = 'FOLLOW';
@@ -96,7 +96,7 @@ export const requestUsers = (page, pageSize) => {
 export const followUnfollowFlow = async (dispatch, userId, apiMethod, actionCreator) => {
     dispatch(toggleIsFollowing(true, userId))
     let response = await apiMethod(userId)
-    if (response.data.resultCode == 0) {
+    if (response.data.resultCode === 0) {
         dispatch(actionCreator(userId))
     }
     dispatch(toggleIsFollowing(false, userId))
